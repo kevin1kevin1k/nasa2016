@@ -82,5 +82,7 @@ class DumbSwitch(app_manager.RyuApp):
 		print 'src:', src
 		self.sendPacket(datapath, msg, broadcastPort)
 		self.addRule(datapath, src, inPort)
+		self.addRule(datapath, 'ff:ff:ff:ff:ff:ff', broadcastPort)
+		
 
 
